@@ -18,16 +18,15 @@
             <img src="resources/Logo.png" alt="Logo" class="logo">
             <ul id="menu">
                 <li><a href="index.html" class="menu-item">HOME</a></li>
-                <li><a href="#" id="lightBeamLink" class="menu-item">LIGHT THE BEAM</a></li>
+                <li><a href="#" class="menu-item" id="lightBeamLink">LIGHT THE BEAM</a></li>
                 <li><a href="store.html" class="menu-item">TEAM STORE</a></li>
                 <!--<li><a href="#" class="menu-item">LOGIN</a></li>-->
            </ul>
         </nav>
     </div>
 </nav>
-        <div class="hero-text">
-            Sacramento Kings
-        </div>
+        <div class="hero-text">Sacramento Kings</div>
+	<div id="beamEffect"></div>
 
 
     <section class="flexbox-container">
@@ -118,8 +117,39 @@ var navbar = document.getElementById("navbar");
                 }
             }
             return 0; // Default to first jersey if none are visible (shouldn't happen in this setup)
-        }        
+        } 
 
+
+
+	document.addEventListener('DOMContentLoaded', () => {
+            const lightBeamLink = document.getElementById('lightBeamLink');
+            const beamEffect = document.getElementById('beamEffect');
+
+            if (lightBeamLink) {
+                lightBeamLink.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    console.log('LIGHT THE BEAM link clicked');
+                    if (beamEffect) {
+                        beamEffect.classList.add('active');
+                        console.log('Beam effect activated');
+
+                        // Remove the class after the animation completes
+                        setTimeout(() => {
+                            beamEffect.classList.remove('active');
+                            console.log('Beam effect deactivated');
+                        }, 2000); // Match this duration with the transition time in CSS
+                    }
+                });
+            } else {
+                console.error('lightBeamLink element not found');
+            }
+        });
+
+
+
+
+
+	
 	
 </script>    
     
