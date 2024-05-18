@@ -252,27 +252,21 @@ document.addEventListener('DOMContentLoaded', () =>
              //light the beam!
 
         
-            const lightBeamLink = document.getElementById('lightBeamLink');
-            const beamEffect = document.getElementById('beamEffect');
+    const lightBeamLink = document.getElementById('lightBeamLink');
+    const beamEffect = document.getElementById('beamEffect');
 
-            if (lightBeamLink) {
-                lightBeamLink.addEventListener('click', function(event) {
-                    event.preventDefault();
-                    console.log('LIGHT THE BEAM link clicked');
-                    if (beamEffect) {
-                        beamEffect.classList.add('active');
-                        console.log('Beam effect activated');
+    if (lightBeamLink && beamEffect) {
+        lightBeamLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            beamEffect.classList.add('active');
 
-                        // Remove the class after the animation completes
-                        setTimeout(() => {
-                            beamEffect.classList.remove('active');
-                            console.log('Beam effect deactivated');
-                        }, 2000); // Match this duration with the transition time in CSS
-                    }
+            // Remove the class after the animation completes
+            setTimeout(() => {
+                beamEffect.classList.remove('active');
+            }, 2000); // Match this duration with the transition time in CSS
+                    
                 });
-            } else {
-                console.error('lightBeamLink element not found');
-            };
+            } 
 
         
     });
