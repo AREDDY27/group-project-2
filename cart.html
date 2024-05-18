@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">    <link rel="icon" href="resources/Logo.png" type="image/png">    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <img src="resources/Logo.png" alt="Logo" class="logo">
+        <ul id="menu">
+            <li><a href="index.html" class="menu-item">HOME</a></li>
+            <li><a href="#" class="menu-item">LIGHT THE BEAM</a></li>
+            <li><a href="store.html" class="menu-item">TEAM STORE</a></li>
+            <li><a href="profile.html" class="menu-item">PROFILE</a></li>            
+        </ul>
+    </nav>
+    <div class="cart-container">
+        <h1>Shopping Cart</h1>
+        <div class="cart-items"></div>
+        <div class="cart-summary">
+            <h3>Total: $<span id="cart-total">0</span></h3>
+            <button id="checkout">Checkout</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

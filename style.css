@@ -1,0 +1,609 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Header and Hero Text */
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(resources/BeamCity.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-text {
+    position: absolute;
+    top: 300px; 
+    width: 100%;
+    text-align: center;
+    color: white; 
+    font-size: 4em; 
+    font-weight: bold;
+    letter-spacing: 2px; 
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+nav{
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1000;
+}
+
+.logo{
+    width: 150px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+nav ul{
+    background: #633974;
+    width: 100%;
+    margin-top: 10px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 20px 30px;
+    color: #fff;
+}
+
+.text{
+    padding: 20px 8%;
+}
+
+nav.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 8%;
+    background: #633974;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: padding 1s;
+    z-index: 1000;
+}
+
+nav.sticky ul{
+    width: auto;
+}
+
+
+.menu-item {
+    color: #fff; 
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+.menu-item:hover, .footer-content a:hover {
+    color: #000000; 
+    text-decoration: underline; 
+}
+
+/* Flexbox Container */
+.flexbox-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+}
+
+.flexbox {
+    flex: 1;
+    min-width: calc(33.333% - 10px); 
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.flexbox h2{
+    text-align: center;
+}
+
+.flexbox h2::before {
+    content: "★"; 
+    display: inline-block;
+    margin-right: 10px;
+    color: #8E44AD;
+}
+
+/* Jerseys */
+.jerseys {
+    position: relative;
+    width: 60%; 
+    margin: auto;
+}
+
+.jersey img {
+    width: 100%; 
+    display: block;
+}
+
+#prevJersey, #nextJersey {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+
+#prevJersey {
+    left: 10px;
+}
+
+#nextJersey {
+    right: 10px;
+}
+
+/* History Section */
+#history .team-history {
+    padding-left: 20px; 
+    color: #333; 
+    font-size: 16px; 
+}
+
+#history .team-history li {
+    margin-bottom: 10px; 
+}
+
+#history .team-history li:first-child {
+    font-weight: bold;
+}
+
+#history .team-history li:last-child {
+    color: #7D3C98; 
+}
+
+.team-history li:nth-child(odd) {
+    background-color: #EDE7F6; 
+}
+
+/* Schedule Section */
+#schedule img {
+    max-width: 100%; 
+    height: auto; 
+}
+
+/* Highlighted Section */
+.highlighted-section {
+    font-size: 2em; 
+    font-weight: bold; 
+    color: #533278; 
+    text-shadow: 2px 2px 4px #757373; 
+    font-family: 'Space Mono', sans-serif; 
+}
+
+/* Subscription Form */
+.subscription-form {
+    background-color: #2d2d2d;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+form {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+form input[type="email"] {
+    padding: 5px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+}
+
+form input[type="email"]:focus {
+    outline: none;
+    border: 2px solid #8E44AD; 
+}
+
+form input[type="email"]::placeholder {
+    color: #7F8C8D; 
+    opacity: 1; 
+}
+
+form button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #8E44AD;
+    color: white;
+}
+
+form button:hover {
+    background-color: #9B59B6; 
+    cursor: pointer; 
+}
+
+/* Footer */
+footer {
+    background-color: #2d2d2d;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer-content a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+/* Store Page */
+
+.store-container {
+    column-count: 3;
+    column-gap: 20px;
+    padding: 20px;
+}
+
+.item {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+.add-to-cart {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #8E44AD;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #9B59B6;
+}
+
+/* Cart Page */
+.cart-container {
+    padding: 20px;
+}
+
+.cart-container h1 {
+    color: #4A235A; /* Dark purple for the header text */
+    margin-bottom: 20px; /* Space below the header */
+    text-align: center; /* Center the header text */
+}
+
+.cart-items {
+    margin-bottom: 20px;
+}
+
+.cart-summary {
+    text-align: right;
+}
+
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 2px solid #ddd;
+    box-shadow: 0 4px 8 px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.cart-item-image {
+    width: 100px ; /* Adjust width */
+    height: 100px ; /* Adjust height */
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.cart-summary button#checkout {
+    background-color: #8E44AD;/* Purple background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s; /* Smooth background color transition */
+    width: auto; /* Auto width */
+    max-width: 200px; /* Maximum width */
+    align-self: center; /* Center the button within the summary */
+}
+
+.cart-summary button#checkout:hover {
+    background-color: #9B59B6; /* Darker shade of purple on hover */
+}
+
+/* Profile Page */
+.profile-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+}
+
+.profile-container h1 {
+    text-align: center;
+    color: #4A235A; /* Dark purple */
+    margin-bottom: 20px;
+}
+
+.profile-links {
+    list-style: none;
+    padding: 50px;
+}
+
+.profile-links li {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.profile-links a {
+    text-decoration: none;
+    color: #4A235A; /* Dark purple */
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid #4A235A;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.profile-links a:hover {
+    background-color: #4A235A;
+    color: #fff;
+}
+
+.logout-button {
+    background-color: #4A235A;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    display: block; /* Make the button block-level */
+    margin: 100px auto 0; /* Center the button and add space above it */
+    text-align: center;
+}
+
+.logout-button:hover {
+    background-color: #512E5F; /* Darker shade of purple */
+    color: #fff;}
+
+/* Login Page */
+.login-container {
+    padding: 20px;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container form label,
+.login-container form input,
+.login-container form button {
+    margin: 10px 0;
+}
+
+.login-container form input,
+.login-container form button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-container form button {
+    background-color: #8E44AD;
+    color: white;
+    cursor: pointer;
+}
+
+.login-container form button:hover {
+    background-color: #9B59B6;
+}
+
+/* General button styles */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Add to Cart button */
+.add-to-cart {
+    background-color: #4CAF50;
+    color: white;
+    margin-top: 10px;
+}
+
+.add-to-cart:hover {
+    background-color: #45a049;
+}
+
+/* Remove from Cart button */
+.remove-from-cart {
+    background-color: #f44336;
+    color: white;
+    margin-left: 10px;
+}
+
+.remove-from-cart:hover {
+    background-color: #d32f2f;
+}
+/* Notification styles */
+.notification {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.notification.show {
+    display: block;
+}
+/* Beam Effect Styles */
+.beamEffect {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 10px;
+    height: 0;
+    background-color: purple;
+    transform: translateX(-50%);
+    transition: height 1s, box-shadow 1s;
+    z-index: 9999;
+}
+
+.beamEffect.active {
+    height: 100vh;
+    box-shadow: 0 0 20px purple;
+}
+
+
+
+
+
+//checkout.html
+
+/* Checkout Page */
+.checkout-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.checkout-container h1 {
+    color: #4A235A; /* Dark purple */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.checkout-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex start;
+}
+
+.checkout-container form label {
+    width: calc(100% - 40px);
+    text-align: left;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.checkout-container form input {
+    width: calc(100% - 40px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 4px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.checkout-container form button {
+    background-color: #8E44AD;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    width: auto;
+    max-width: 200px;
+    align-self: center;
+}
+
+.checkout-container form button:hover {
+    background-color: #9B59B6; 
+}
+
+.checkout-container .order-summary {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 18px;
+    width: calc(100% - 40px);
+}
+
+
+/* Order Confirmation Page */
+
+
+.confirmation-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    
+}
+
+.confirmation-container h1 {
+    color: #4A235A; /* Dark purple */
+    margin-bottom: 20px;
+    }
+
+.confirmation-container p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
